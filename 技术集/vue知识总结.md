@@ -19,7 +19,17 @@ npm install
 npm  run dev
 ```
 
+## vue项目开发步骤
+
+- 根据原型稿拆分组件——》路由组件（pages）、复用组件（components）
+
+- 根据路由组件定好路由router/index.js
+- 看后端接口文档写好api/ajax、index请求好数据，有些时候后端没写好接口则需要自己mock数据
+- 确定好共享的状态数据，写好store
+- 分别用复用组件开发路由组件
+
 ## Vue知识总结
+
 >Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层
 
 ### 模块化与组件化的区别：
@@ -129,6 +139,10 @@ export default {
     }
 }
 ```
+### 修饰符
+
+- sync：在2.3.0+版本之后，vue又重新引进了.sync这个修饰符了，这个修饰符可以让子组件的数据带动父组件的数据改动。但是除了这个修饰符，我们还要在子组件里面添加一个watch 监测事件来，触发修改父组件的数据。
+
 ### 自定义属性
 
 1.html里设置data-xx
@@ -293,6 +307,21 @@ Vue.component('', {
 </div>
 ```
 
+### vue组件库的使用。
+
+element-ui使用局部引入使用
+1.在组件里`import { Table, TableColumn } from "element-ui"`;
+
+2.`components: {Table, TableColumn}`
+
+3.`<Table></Table>、<table-column type="selection" width="55"></table-column>`全局引入使用
+
+1.在main中`import { Input} from 'element-ui';`
+
+2.在组件中`<el-input placeholder="请输入内容" prefix-icon="el-icon-search" v-model="input" @change="search" id="el-input"></el-input>`
+
+二者在使用时注意是否要加`el-`
+
 ### 增加eslint做代码规范
 
 安装依赖
@@ -370,3 +399,12 @@ optimization: {
 #### Karma（在node跑的测试框架）+Mocha
 
 >Mocha（测试框架） 不带断言库+Chai断言库
+
+### Vue遇到的坑
+
+- scpoed只对当前文件起作用。
+- for循环必须加key值，key值一般用item值而不用index，是为了虚拟dom的优化机制。
+
+### Vue犯错
+
+- router/index.js中的routes写错成routers，导致错误。

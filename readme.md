@@ -94,6 +94,12 @@
 
 [关于事件循环Event Loop](./技术集/关于事件循环Eventloop.md)
 
+[Promise的那些事儿](./技术集/Promise的那些事儿.md)
+
 ### 11月
 
 [react16实战总结](./技术集/react16实战总结.md)
+
+### 12月
+
+[aysnc...await总结](./技术集/aysnc...await总结.md)
