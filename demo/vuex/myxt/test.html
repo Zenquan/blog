@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible"content="IE=edge,chrome=1">
+  <title>Examples</title>
+  <script src="https://cdn.bootcss.com/vue/2.5.18-beta.0/vue.min.js"></script>
+</head>
+
+<body>
+  <divid="app">
+    <table>
+      <tr>
+        <th colspan="3">父组件数据</th>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>{{name}}</td>
+        <td>
+          <input type="text"v-model="name" />
+        </td>
+      </tr>
+      <tr>
+        <td>age</td>
+        <td>{{age}}</td>
+        <td>
+          <input type="text"v-model="age" />
+        </td>
+      </tr>
+    </table>
+    <my-component v-bind:myname.sync="name"v-bind:myage.sync="age">
+      </my-component>
+      </div>
+      <template id="myComponent">
+        <table>
+          <tr>
+            <th colspan="3">子组件数据</th>
+          </tr>
+          <tr>
+            <td>myname</td>
+            <td>{{myname}}</td>
+            <td>
+              <input type="text"v-model="myname" />
+            </td>
+          </tr>
+          <tr>
+            <td>myage</td>
+            <td>{{myage}}</td>
+            <td>
+              <input type="text"v-model="myage" />
+            </td>
+          </tr>
+        </table>
+        </template>
+        <script>
+          varvm = new Vue({
+            el: '#app',
+            data: {
+              name: 'lin',
+              age: 18
+            },
+            components: {
+              'my-component': {
+                template: '#myComponent',
+                props: ['myname', 'myage'],
+                data: function () {
+                  return {
+                    myname: this.name,
+                    myage: this.age
+                  }
+                },
+                watch: {
+                  name: function () {
+                    this.name = name
+                  },
+                  myname: function () {
+                    this.$emit("update:myname", this.myname)
+                  }
+                }
+              }
+            }
+          })
+
+        </script>
+</body>
+
+</html>

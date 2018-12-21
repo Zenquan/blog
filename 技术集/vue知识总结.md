@@ -408,3 +408,25 @@ optimization: {
 ### Vue犯错
 
 - router/index.js中的routes写错成routers，导致错误。
+
+
+
+### Vue组件库使用经验
+
+## element-ui使用
+
+### 局部引入使用
+
+1.在组件里`import { Table, TableColumn } from "element-ui";`
+
+2.`  components: {Table, TableColumn}`
+
+3.`<Table></Table>`、`<table-column type="selection"          width="55"></table-column>`
+
+### 全局引入使用
+
+1.在main中`import { Input} from 'element-ui';`
+
+2.在组件中`<el-input placeholder="请输入内容" prefix-icon="el-icon-search" v-model="input" @change="search" id="el-input"></el-input>`
+
+**二者在使用时注意是否要加`el-`**

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+  <script src="./vuex.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div>{{count}}</div>
+    <my-comp01></my-comp01>
+    <my-comp02></my-comp02>
+  </div>
+  <script>
+    var store = new Vuex.Store({
+      state: {
+        count: 0
+      },
+      mutations: {
+        add: (state)=>{
+          state.count++
+        },
+        remove: (state)=>{
+          state.count--
+        }
+      }
+    })
+    var app = new Vue({
+      el: '#app',
+      // data: {
+      //   count: 0
+      // },
+      computed: {
+        count: function() {
+          return store.state.count
+        }
+      },
+      components: {
+        'my-comp01': {
+          template: '<button @click="setcount">+</button>',
+          methods: {
+            setcount() {
+              store.commit('add')
+            }
+          }
+        },
+        'my-comp02': {
+          template: '<button @click="setcount">-</button>',
+          methods: {
+            setcount() {
+              store.commit('remove')
+            }
+          }
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
