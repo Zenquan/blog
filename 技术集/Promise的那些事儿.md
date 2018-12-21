@@ -1,4 +1,3 @@
-# Promise的那些事儿
 ---
 title: Promise的那些事儿
 categories: [前端, ES6]
