@@ -25,7 +25,7 @@ tags: [技术,计算机,前端, JavaScript]
       - offsetLeft只跟左边框到父级元素边框距离（绝对定位优先于父级padding，不要忽略自己的margin）有关
       - offsetTop只跟上边框到父级元素边框距离（绝对定位优先于父级padding，不要忽略自己的margin）有关
 
-      ![](D:\zenquan\zenquan-note\personal-note\2018年12月工作记录\2018年12月知识总结\images\offset.png)
+      ![](https://user-gold-cdn.xitu.io/2018/12/21/167d0a4023640947?w=576&h=341&f=png&s=25016)
 
       2. client:
 
