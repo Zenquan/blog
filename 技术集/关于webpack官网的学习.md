@@ -75,11 +75,11 @@ output: {
 
 ##### 在vue项目中使用webpack
 
-![](D:\note\zenquan.github.io\images\build.png)
+![](../images/build.png)
 
 ##### 在react项目中使用webpack
 
-
+> 已经内置在react-scripts包里了
 
 #### 怎么写一个loader
 
