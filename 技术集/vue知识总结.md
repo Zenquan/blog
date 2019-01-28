@@ -92,7 +92,7 @@ Vue.component('todo-item', {
 ```
 ### vue生命周期
 
-![](https://cn.vuejs.org/images/lifecycle.png)
+![](../images/vue_lifecycle-标注版本.png)
 
 ### vue指令
 
@@ -430,3 +430,176 @@ optimization: {
 2.在组件中`<el-input placeholder="请输入内容" prefix-icon="el-icon-search" v-model="input" @change="search" id="el-input"></el-input>`
 
 **二者在使用时注意是否要加`el-`**
+
+方法methods、[计算属性和侦听器](https://cn.vuejs.org/v2/guide/computed.html)computed、watch的区别
+
+- [计算属性缓存 vs 方法](https://cn.vuejs.org/v2/guide/computed.html#%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E7%BC%93%E5%AD%98-vs-%E6%96%B9%E6%B3%95)
+
+你可能已经注意到我们可以通过在表达式中调用方法来达到同样的效果：
+
+```
+<p>Reversed message: "{{ reversedMessage() }}"</p>
+// 在组件中
+methods: {
+  reversedMessage: function () {
+    return this.message.split('').reverse().join('')
+  }
+}
+```
+
+我们可以将同一函数定义为一个方法而不是一个计算属性。两种方式的最终结果确实是完全相同的。然而，不同的是**计算属性是基于它们的依赖进行缓存的**。只在相关依赖发生改变时它们才会重新求值。这就意味着只要 `message` 还没有发生改变，多次访问 `reversedMessage` 计算属性会立即返回之前的计算结果，而不必再次执行函数。
+
+这也同样意味着下面的计算属性将不再更新，因为 `Date.now()` 不是响应式依赖：
+
+```
+computed: {
+  now: function () {
+    return Date.now()
+  }
+}
+```
+
+相比之下，每当触发重新渲染时，调用方法将**总会**再次执行函数。
+
+我们为什么需要缓存？假设我们有一个性能开销比较大的计算属性 **A**，它需要遍历一个巨大的数组并做大量的计算。然后我们可能有其他的计算属性依赖于 **A** 。如果没有缓存，我们将不可避免的多次执行 **A** 的 getter！如果你不希望有缓存，请用方法来替代。
+
+- [计算属性 vs 侦听属性](https://cn.vuejs.org/v2/guide/computed.html#%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7-vs-%E4%BE%A6%E5%90%AC%E5%B1%9E%E6%80%A7)
+
+Vue 提供了一种更通用的方式来观察和响应 Vue 实例上的数据变动：**侦听属性**。当你有一些数据需要随着其它数据变动而变动时，你很容易滥用 `watch`——特别是如果你之前使用过 AngularJS。然而，通常更好的做法是使用计算属性而不是命令式的 `watch` 回调。细想一下这个例子：
+
+```js
+<div id="demo">{{ fullName }}</div>
+var vm = new Vue({
+  el: '#demo',
+  data: {
+    firstName: 'Foo',
+    lastName: 'Bar',
+    fullName: 'Foo Bar'
+  },
+  watch: {
+    firstName: function (val) {
+      this.fullName = val + ' ' + this.lastName
+    },
+    lastName: function (val) {
+      this.fullName = this.firstName + ' ' + val
+    }
+  }
+})
+```
+
+上面代码是命令式且重复的。将它与计算属性的版本进行比较：
+
+```js
+var vm = new Vue({
+  el: '#demo',
+  data: {
+    firstName: 'Foo',
+    lastName: 'Bar'
+  },
+  computed: {
+    fullName: function () {
+      return this.firstName + ' ' + this.lastName
+    }
+  }
+})
+```
+
+### 引入外部库或者插件
+
+- 引入外部库
+
+在main.js
+
+```js
+import moment from 'moment';
+Object.defineProperty(Vue.prototype, '$moment', { value: moment });
+```
+
+MyNewComponent.vue
+
+```js
+export default {
+  created() {
+    console.log('The time is ' . this.$moment().format("HH:mm"));
+  }
+}
+```
+
+- 如何创建自己的Vue插件
+
+  在main.js
+
+```js
+import MyLibraryPlugin from 'my-library-plugin';
+Vue.use(MyLibraryPlugin);
+```
+
+- 如何写插件
+
+首先，创建一个文件。本例中，我将引入一个Axios库的插件。我们就把这个文件命名为axios.js吧。
+最关键的地方在于，我们需要暴露一个将Vue构造器作为第一个参数的install方法。
+axios.js
+
+```js
+export default {
+  install: function(Vue) {
+    // Do stuff
+  }
+}
+```
+
+然后我们可以用之前的方式将库添加到Vue的原型对象上：
+axios.js
+
+```js
+import axios from 'axios';
+
+export default {
+  install: function(Vue) {
+    Object.defineProperty(Vue.prototype, '$http', { value: axios });
+  }
+}
+```
+
+接着我们只需要Vue实例的use方法就能将这个库引入整个项目了。我们像下面代码一样简单引入：
+main.js
+
+```js
+import AxiosPlugin from './axios.js';
+Vue.use(AxiosPlugin);
+
+new Vue({
+  created() {
+    console.log(this.$http ? 'Axios works!' : 'Uh oh..');
+  }
+})
+```
+
+- 插件参数设置
+
+插件的install方法还可以接受其他的可选参数。有些开发者可能不喜欢Axios实例对象的方法名`$http`，因为`Vue resource`插件的方法名也是这个。然后，让我们利用第二个参数来修改它。
+axios.js
+
+```js
+import axios from 'axios';
+
+export default {
+  install: function(Vue, name = '$http') {
+    Object.defineProperty(Vue.prototype, name, { value: axios });
+  }
+}
+```
+
+main.js
+
+```js
+import AxiosPlugin from './axios.js';
+Vue.use(AxiosPlugin, '$axios');
+
+new Vue({
+  created() {
+    console.log(this.$axios ? 'Axios works!' : 'Uh oh..');
+  }
+})
+```
+
