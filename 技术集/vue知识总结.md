@@ -603,3 +603,6 @@ new Vue({
 })
 ```
 
+### 开发基于vue的组件库
+
+参考： [如何开发一套基于Vue的组件库](https://www.jianshu.com/p/a89666d591a4)
