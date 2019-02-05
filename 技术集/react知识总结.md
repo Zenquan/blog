@@ -366,7 +366,7 @@ window.loaction = '#hash';
 window.onhashchange = function(){
   console.log('current hash:', window.location.hash)
 }
-``` 
+```
 - H5 Router
 >包括页面跟hash路由
 ```js

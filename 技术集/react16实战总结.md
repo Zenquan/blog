@@ -15,7 +15,7 @@ tags: [技术,计算机,前端,JavaScript,React]
 
 1. li里要带key值否则会警告，这个问题在vue中也存在, 考虑到虚拟DOM中diff，所以不要用index作为key值，而要用item。
 
-![key-warning](./images/key.png)
+![key-warning](../images/key.png)
 
 2.immutable: state不允许我们做任何的改变，所以拷贝一份list，修改完再用setSate设置
 
@@ -37,19 +37,19 @@ tags: [技术,计算机,前端,JavaScript,React]
 
 3.Uncaught Error: Can only set one of `children` or `props.dangerouslySetInnerHTML`
 
-![dangerouslySetInnerHTML01](./images/dangerouslySetInnerHTML01.png)
+![dangerouslySetInnerHTML01](../images/dangerouslySetInnerHTML01.png)
 
-![dangerouslySetInnerHTML02](./images/dangerouslySetInnerHTML02.png)
+![dangerouslySetInnerHTML02](../images/dangerouslySetInnerHTML02.png)
 
 解决方法
 
 - 使用dangerouslySetInnerHTML属性的虚拟dom元素之间可能有内容，应该没有任何内容
 
-![dangerouslySetInnerHTML03](./images/dangerouslySetInnerHTML03.png)
+![dangerouslySetInnerHTML03](../images/dangerouslySetInnerHTML03.png)
 
 - 改正
 
-![dangerouslySetInnerHTML04](./images/dangerouslySetInnerHTML04.png)
+![dangerouslySetInnerHTML04](../images/dangerouslySetInnerHTML04.png)
 
 ## 遇到之前不会的知识点
 
@@ -104,7 +104,7 @@ TodoItem.propTypes = {
 
 假如把`content: PropTypes.string`改成`content: PropTypes.number`,则会警告，因为content是字符串类型，不是数字类型。
 
-[](./images/propTypes.png)
+![](../images/propTypes.png)
 
 5.defaultProps：用于设置isRequired的默认值
 
@@ -169,11 +169,11 @@ diff算法
 
 - 1.setState使用异步函数是为了把多次setSate合并成一次，节约性能。
 
-![diff](./images/diff.png)
+![diff](../images/diff.png)
 
 - 2.diff算法实际上是同层比对虚拟DOM的算法,只要对比一层不同，就删除下面的，用新的虚拟DOM替换，这样可以节约比对时间，节约性能。
 
-![diff](./images/diff.jpg)
+![diff](../images/diff.jpg)
 
 - 3.循环列表中，li里要带key值否则会警告，这个问题在vue中也存在, 考虑到虚拟DOM中diff，所以不要用index作为key值，而要用item。
 
@@ -226,9 +226,9 @@ handleClick() {
 - 1.创建todolist.json
 - 2.使用Charles网络代理工具
 
-![charles](./images/charles.jpg)
-![charles](./images/charles02.jpg)
-![charles](./images/charles03.jpg)
+![charles](../images/charles.jpg)
+![charles](../images/charles02.jpg)
+![charles](../images/charles03.jpg)
 
 - 3.mock
 
@@ -296,11 +296,11 @@ axios.get('/api/todolist')
 15.redux
 由于一些中大型项目中，组件之间的传值比较复杂，所以就要引入redux来管理数据状态。
 
-![redux](./images/redux02.png)
+![redux](../images/redux02.png)
 
 redux原理
 
-![redux](./images/redux01.png)
+![redux](../images/redux01.png)
 
 实现redux: 在store文件夹里实现store，然后在组件中使用，通过store.subscribe(this.handleStoreChange)订阅，通过store.dispatch(action)修改store
 

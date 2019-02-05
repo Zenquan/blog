@@ -35,9 +35,9 @@ Event Loop：JavaScript解决单线程的执行机制。
 
 JavaScript的运行机制
 
-![](./images/eventloop01.png)
+![](../images/eventloop01.png)
 事件（任务）如果是同步任务就进入执行栈，异步任务进入event table，然后主线程执行同步任务的宏任务（settimeout、setInterval、new Promise（）、script）和 微任务（Promise.then、process.nextTick）,等到主线程有空闲时，异步任务形成的队列，也是先执行宏任务再执行微任务，然后一直轮询执行事件循环。
-![](./images/eventloop02.png)
+![](../images/eventloop02.png)
 
 ## 实践理解Event Loop
 ```js
