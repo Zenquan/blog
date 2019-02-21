@@ -23,7 +23,7 @@ typeof出现的问题1——typeof null === 'object'
 
 然后你会发现，`typeof null; // 'object' `。null可是原始数据类型的啊，怎么就是'object'了呢？？（不解.jpg）原来这个已经是历史问题了，在 JS 的最初版本中使用的是 32 位系统，为了性能考虑使用低位存储变量的类型信息，`000` 开头代表是对象，然而 `null` 表示为全零，所以将它错误的判断为 `object` 。虽然现在的内部类型判断代码已经改变了，但是对于这个 Bug 却是一直流传下来。
 
-typeof出现的问题2——typeof 引用类型 || Math === ‘object’
+typeof出现的问题2——typeof 引用类型 | Math === ‘object’
 
 > 这样根本不知道是数组还是对象
 
@@ -32,7 +32,7 @@ typeof [] // "object"
 typeof {} // "object"
 ```
 
-typeof出现的问题3——typeof 基本包装类型 ||  Array ||Date === ‘funtion’
+typeof出现的问题3——typeof 基本包装类型 |  Array ||Date === ‘funtion’
 
 > 这样也不能知道是Number还是Boolean还是String
 

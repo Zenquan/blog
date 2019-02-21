@@ -142,4 +142,6 @@
 
 [学习node总结](./技术集/学习node总结.md)
 
+[大兄dei，早点看清this吧](./技术集/大兄dei，早点看清this吧.md)
+
 [我所知道的JavaScript中判断数据类型](./技术集/我所知道的JavaScript中判断数据类型.md)
