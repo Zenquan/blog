@@ -49,7 +49,7 @@ name: Hexo build and deploy
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -61,7 +61,7 @@ jobs:
       with:
         persist-credentials: false
         # checkout到你的hexo代码分支
-        ref: dev
+        ref: master
         # hexo需要加载内部子模块
         submodules: true
     - name: Install and Build
