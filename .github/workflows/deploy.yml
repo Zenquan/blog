@@ -64,6 +64,17 @@ jobs:
         ref: master
         # hexo需要加载内部子模块
         submodules: true
+
+    - name: Update Submodule      # 如果仓库有 submodule，在这里更新，没有则删掉此步骤
+      run: |
+        git submodule init
+        git submodule update --remote
+
+    - name: Setup Node            # 安装 Node 环境
+      uses: actions/setup-node@v1
+      with:
+        node-version: "10.x"
+
     - name: Install and Build
       run: |
         npm install
