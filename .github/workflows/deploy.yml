@@ -87,7 +87,7 @@ jobs:
         ARGS: "-avz --delete"
         SERVER_PORT: '22'
         SOURCE: "public"
-        REMOTE_HOST: "112.74.33.210"
+        REMOTE_HOST: ${{ secrets.ALIYUN_SERVER_HOST }}
         REMOTE_USER: "root"
         TARGET: "/root/workspace/blog.joyenjoy.tech"
 
