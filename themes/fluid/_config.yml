@@ -80,7 +80,7 @@ custom_html: ''  # 自定义底部 HTML 内容（位于 footer 上方），也�
 
 web_analytics:  # 网页访问统计
   enable: true
-  baidu:  'siteId=15729461' # 百度统计的 Key，参见 https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376 代码获取中 hm.js? 后边的字符串
+  baidu:  '15729461' # 百度统计的 Key，参见 https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376 代码获取中 hm.js? 后边的字符串
   google:  # Google 统计的 Tracking ID，参见 https://analytics.google.com/analytics/web/
   gtag:  # Google gtag.js 的媒体资源 ID，参见 https://analytics.google.com/analytics/web/ 中的 管理 -> 媒体资源设置 -> 跟踪 ID
   tencent:  # 腾讯统计的 H5 App id，参见 https://mta.qq.com/h5/manage/ctr_app_manage (开启高级功能才有cid)
@@ -120,7 +120,7 @@ version:  # 主题版本相关
 # Header
 #---------------------------
 navbar:
-  blog_title: Zenquan码字地方 # 导航栏左侧的标题，为空则按 hexo config.title 显示
+  blog_title: Zenquan # 导航栏左侧的标题，为空则按 hexo config.title 显示
   ground_glass:  # 导航栏毛玻璃特效，实验性功能，可能会造成页面滚动掉帧和抖动，部分浏览器不支持会自动不生效
     enable: true
     px: 3  # 模糊像素，只能为数字，数字越大模糊度越高
