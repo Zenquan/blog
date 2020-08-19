@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Zenquan的个人站点
-subtitle: 'Zenquan的个人站点'
-description: 'Zenquan的个人站点'
-keywords: Zenquan的个人站点, Zenquan
+title: Zenquan码字地方
+subtitle: 'Zenquan码字地方'
+description: 'Zenquan码字地方'
+keywords: Zenquan码字地方, Zenquan
 author: Zenquan
 language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: www.joyenjoy.tech
+url: article.joyenjoy.tech
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

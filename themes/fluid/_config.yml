@@ -11,9 +11,9 @@
 # 全局
 # Site
 #---------------------------
-favicon: /img/favicon.png # 网站标签页的 icon
+avatar: /img/avatar.png # 网站标签页的 icon
 
-apple_touch_icon: /img/favicon.png # 用于苹果设备的 icon
+apple_touch_icon: /img/avatar.png # 用于苹果设备的 icon
 
 title_join_string: ' - '  # 浏览器标签页中的标题分隔符，效果： 文章名 - 站点名
 
@@ -80,7 +80,7 @@ custom_html: ''  # 自定义底部 HTML 内容（位于 footer 上方），也�
 
 web_analytics:  # 网页访问统计
   enable: true
-  baidu:  'siteId=15718098' # 百度统计的 Key，参见 https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376 代码获取中 hm.js? 后边的字符串
+  baidu:  'siteId=15729461' # 百度统计的 Key，参见 https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376 代码获取中 hm.js? 后边的字符串
   google:  # Google 统计的 Tracking ID，参见 https://analytics.google.com/analytics/web/
   gtag:  # Google gtag.js 的媒体资源 ID，参见 https://analytics.google.com/analytics/web/ 中的 管理 -> 媒体资源设置 -> 跟踪 ID
   tencent:  # 腾讯统计的 H5 App id，参见 https://mta.qq.com/h5/manage/ctr_app_manage (开启高级功能才有cid)
@@ -120,7 +120,7 @@ version:  # 主题版本相关
 # Header
 #---------------------------
 navbar:
-  blog_title: Zenquan # 导航栏左侧的标题，为空则按 hexo config.title 显示
+  blog_title: Zenquan码字地方 # 导航栏左侧的标题，为空则按 hexo config.title 显示
   ground_glass:  # 导航栏毛玻璃特效，实验性功能，可能会造成页面滚动掉帧和抖动，部分浏览器不支持会自动不生效
     enable: true
     px: 3  # 模糊像素，只能为数字，数字越大模糊度越高
@@ -130,7 +130,7 @@ navbar:
     - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
     - { key: 'category', link: '/categories/', icon: 'iconfont icon-category-fill' }
     - { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
-    # - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill' }
+    - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill' }
     - { key: 'cnblog', link: 'https://www.cnblogs.com/Jomsou/', icon: 'iconfont icon-link-fill' }  
     - { key: 'wheels', link: 'http://wheels.joyenjoy.tech', icon: 'iconfont icon-link-fill' } 
 
@@ -251,7 +251,7 @@ post:  # 部分配置同时控制自定义页面，注意备注
     options: { theme: 'default' }  # 接口选项，具体可见：http://mermaid-js.github.io/mermaid/#/mermaidAPI
   comments:  # 评论
     enable: true  # 开启评论
-    type: utterances  # 指定使用的评论模块  available: disqus | valine | gitalk | utterances | changyan | livere  推荐 utterances
+    type: valine  # 指定使用的评论模块  available: disqus | valine | gitalk | utterances | changyan | livere  推荐 utterances
 
 
 #---------------------------
@@ -263,13 +263,13 @@ post:  # 部分配置同时控制自定义页面，注意备注
 
 # utterances
 # You can install utterances with https://utteranc.es/ and generate your configuration
-utterances:
-  repo: Zenquan/zenquan.github.io
-  issue_term: pathname
-  label: utterances
-  theme: github-dark
-  crossorigin: anonymous
-  cdn: https://utteranc.es/client.js
+# utterances:
+#   repo: Zenquan/zenquan.github.io
+#   issue_term: pathname
+#   label: utterances
+#   theme: github-dark
+#   crossorigin: anonymous
+#   cdn: https://utteranc.es/client.js
 
 # Disqus
 disqus:
@@ -301,15 +301,15 @@ gitalk:
 # 完整文档 https://valine.js.org/configuration.html
 # 注意：下列配置项中的 true/false 不要用引号括起来
 valine:
-  appid:  # 从 LeanCloud 的应用中得到的 appId
-  appkey:  # 从 LeanCloud 的应用中得到的 APP Key
+  appid: PtmCM2HPumAqzjN5Q0s58heg-gzGzoHsz # 从 LeanCloud 的应用中得到的 appId
+  appkey: O9JV2r5sbAT0CFv6SXtx5q5V # 从 LeanCloud 的应用中得到的 APP Key
   placeholder: 说点什么 # 评论框占位提示符
   path: window.location.pathname # 当前文章页路径，用于区分不同的文章页，以保证正确读取该文章页下的评论列表
   avatar: retro # Gravatar 头像展示方式
   meta: ['nick', 'mail', 'link']  # 评论者相关属性
   pageSize: 10 # 评论列表分页，每页条数
   lang: zh-CN # zh-CN | zh-TW | en | ja
-  highlight: false # 代码高亮
+  highlight: true # 代码高亮
   recordIP: false # 是否记录评论者IP
   serverURLs:  # REST API 服务器地址，国际版不填
 
@@ -374,12 +374,12 @@ about:  # 关于页需要手动创建，具体请见：https://hexo.fluid-dev.co
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   subtitle:  # 打字机内容
   avatar: /img/avatar.png # 头像
-  name: myname
-  introduce: '一句简短的介绍' # 支持 HTML
+  name: Zenquan
+  introduce: '热爱写代码，码字，旅游、拍照的理工男' # 支持 HTML
   icons: # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，class 代表图标的 css class
-    - { class: 'iconfont icon-github-fill', link: 'https://github.com', tip: 'GitHub' }
-    - { class: 'iconfont icon-douban-fill', link: 'https://douban.com', tip: '豆瓣' }
-    - { class: 'iconfont icon-wechat-fill', qrcode: '/img/favicon.png' }  # 添加 qrcode 后，点击不再跳转，而是悬浮二维码，需要指定 image
+    - { class: 'iconfont icon-github-fill', link: 'https://github.com/zenquan', tip: 'GitHub' }
+    - { class: 'iconfont icon-zhihu-fill', link: 'https://www.zhihu.com/people/zhenquancai', tip: '知乎' }
+    # - { class: 'iconfont icon-wechat-fill', qrcode: '/img/avatar.png' }  # 添加 qrcode 后，点击不再跳转，而是悬浮二维码，需要指定 image
 
 
 #---------------------------
@@ -407,17 +407,17 @@ links:
       title: 'Fluid Docs',
       intro: '主题使用指南',
       link: 'https://hexo.fluid-dev.com/docs/',
-      image: '/img/favicon.png'
+      image: '/img/avatar.png'
     }
     - {
       title: 'Fluid Repo',
       intro: '主题 GitHub 仓库',
       link: 'https://github.com/fluid-dev/hexo-theme-fluid',
-      image: '/img/favicon.png'
+      image: '/img/avatar.png'
     }
     - {
       title: 'Fluid Example',
       intro: '主题操作示例',
       link: 'https://hexo.fluid-dev.com/docs/example/',
-      image: '/img/favicon.png'
+      image: '/img/avatar.png'
     }
