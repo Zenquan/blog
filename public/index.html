@@ -1,977 +1,361 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zenquan的博客 - 用心写好代码，用心阅读生活。</title><meta name="keywords" content="Zenquan的博客, Zenquan"><meta name="author" content="Zenquan"><meta name="copyright" content="Zenquan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="用心写好代码，用心阅读生活。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zenquan的博客">
+<meta property="og:url" content="blog.joyenjoy.tech/index.html">
+<meta property="og:site_name" content="Zenquan的博客">
+<meta property="og:description" content="用心写好代码，用心阅读生活。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/头像.jpeg">
+<meta property="article:author" content="Zenquan">
+<meta property="article:tag" content="Zenquan的博客, Zenquan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/头像.jpeg"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/头像.jpeg"><link rel="canonical" href="blog.joyenjoy.tech/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Zenquan的博客',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-06-19 17:35:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
 
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.png">
-  <link rel="icon" type="image/png" href="/">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="Zenquan码字地方">
-  <meta name="author" content="Zenquan">
-  <meta name="keywords" content="Zenquan码字地方, Zenquan">
-  <title>Zenquan码字地方</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-<!-- 自定义样式保持在最底部 -->
-
-
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.0.2"></head>
-
-
-<body>
-  <header style="height: 50vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>Zenquan</strong>&nbsp;</a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" rel="noopener" href="https://www.cnblogs.com/Jomsou/">
-                <i class="iconfont icon-link-fill"></i>
-                博客园
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" rel="noopener" href="http://wheels.joyenjoy.tech">
-                <i class="iconfont icon-link-fill"></i>
-                轮子站
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
-          </li>
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" href="javascript:">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-    <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/blue.png') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container page-header text-center fade-in-up">
-            <span class="h2" id="subtitle">
-              
-            </span>
-
-            
-          </div>
-
-          
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main>
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-
-  <div class="row mx-auto index-card">
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2018/08/18/2018%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" target="_self">
-          <img src="/img/shamian.png" srcset="/img/loading.gif" alt="2018上半年拙作">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2018/08/18/2018%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/">2018上半年拙作</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2018/08/18/2018%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/">
-          
-          
-            
-          
-          
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.0.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/头像.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/Big Sur Horizon2.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Zenquan的博客</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Zenquan的博客</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2018/08/18/2018%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2018上半年拙作">     <img class="post_bg" src="/img/bear.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2018上半年拙作"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/08/18/2018%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2018上半年拙作">2018上半年拙作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-08-17T16:00:00.000Z" title="发表于 2018-08-18 00:00:00">2018-08-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%97/">诗</a></span></div><div class="content">
 以下这些都是2018年以忆璀萧为名写的拙作，今做整理，仅作纪念！
 
-        </a>
-      </p>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2018-08-18 00:00" pubdate>
-              2018-08-18
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AF%97/">诗</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>
-            
-              <a href="/tags/%E8%AF%97/">诗</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2018/04/05/%E5%9C%A8%E6%88%91%E7%9C%8B%E6%9D%A5%E5%A6%82%E4%BD%95%E5%AD%A6%E5%A5%BD%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A8%8B/" target="_self">
-          <img src="/img/learn.png" srcset="/img/loading.gif" alt="在我看来如何学好前端编程">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2018/04/05/%E5%9C%A8%E6%88%91%E7%9C%8B%E6%9D%A5%E5%A6%82%E4%BD%95%E5%AD%A6%E5%A5%BD%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A8%8B/">在我看来如何学好前端编程</a>
-      </h1>
 
-      <p class="index-excerpt">
-        <a href="/2018/04/05/%E5%9C%A8%E6%88%91%E7%9C%8B%E6%9D%A5%E5%A6%82%E4%BD%95%E5%AD%A6%E5%A5%BD%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A8%8B/">
-          
-          
-            
-          
-          
+(五十二)仙溪随记(四)无题•雨夜——忆璀萧 2018.01.06 19：48寒风中，细雨敲扣着窗，好似知晓屋里比较温暖。街道边，橙灯散射着光，估计明白天色稍渐昏暗。凭栏处，伊人遥望远方，大抵在思念着窗与海湾。
+(五十三)——忆璀萧 2018.01.29  11:54雨惹满城丝飞絮，俯身细细听尔语。
+(五十四)浮躁
+浮躁 ，第一次深刻记住这个词，是在读初二的时候，在潮阳文光塔底下的图书馆，借了一本贾平凹的《浮躁》一书，锈迹斑斑的书架上杂乱地摆放着陈旧的书，大抵也是因为这里的书能够满足这里的人文精神需求罢！现在看来，其实有必要一直以浮躁一词来审视自己，学习过程、生活、精神世界是否浮躁，需要如何更为淡然地去对待去处理。
+(五十五)写给自己以及未来的自己的话
+感谢2017，接触了很多社会现实的问题。1.思考一：开始思考，并确定自己喜欢又得以安身立命的职业方向，过去的故事以后尽量不提，因为毕竟没有太多的时间去感伤，而应当花很多的时间去行动。2.思考二：为什么很多东西国人没办法做好？我觉得很大一部分原因在于浮躁。说实在， ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2018/04/05/%E5%9C%A8%E6%88%91%E7%9C%8B%E6%9D%A5%E5%A6%82%E4%BD%95%E5%AD%A6%E5%A5%BD%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A8%8B/" title="在我看来如何学好前端编程">     <img class="post_bg" src="/img/learn.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在我看来如何学好前端编程"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/04/05/%E5%9C%A8%E6%88%91%E7%9C%8B%E6%9D%A5%E5%A6%82%E4%BD%95%E5%AD%A6%E5%A5%BD%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A8%8B/" title="在我看来如何学好前端编程">在我看来如何学好前端编程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-04-04T16:00:00.000Z" title="发表于 2018-04-05 00:00:00">2018-04-05</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%96%87%E7%AB%A0/">文章</a></span></div><div class="content">
 在网上总能够看到很多关于面试也好的文章或者资源，或者是关于一些基础知识的文章，本文是学习中的一些感想，还有自己在网上搜索资料学习时积累下来的文章或者资源。
 
-        </a>
-      </p>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2018-04-05 00:00" pubdate>
-              2018-04-05
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E6%96%87%E7%AB%A0/">文章</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
-            
-              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
-            
-              <a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
-            
-              <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2017/12/30/2017%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" target="_self">
-          <img src="/img/nature8.jpg" srcset="/img/loading.gif" alt="2017年下半年拙作">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2017/12/30/2017%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/">2017年下半年拙作</a>
-      </h1>
+说几句自己最近的感受，说实在的，基础真的很重要。还有就是，现在网上各大论坛充斥着用Vue或者React写着各种譬如网易云音乐或者是饿了么等客户端，个人觉得还是要根据技术团队实际、性能、学习成本等实际情况来挑选。
+计算机基础《C语言程序设计》
+《数据结构与算法》
+《计算机组成原理》
+《编译原理》
+《Java程序设计》
+《设计模式》
+《计算机网路》
+《数据库原理》
+《操作系统》
+前端学习前端技术的几大推荐如以下：
+1、《JavaScript高级程序设计》/《JavaScript权威指南》
+2、《CSS权威指南》/《CSS大揭秘》/《图解CSS3》
+3、文档网站类（!!!程序猿不看文档，做什么程序猿）
 
-      <p class="index-excerpt">
-        <a href="/2017/12/30/2017%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/">
-          
-          
-            
-          
-          
+MDN（!!!敲黑板）
+github（!!!敲黑板）
+印记中文
+Bootstrap中文网
+
+4、前端的几个资源大合集（建议自己模仿的架构自己的知识体系）
+ 最全前端资源汇集 
+web前端网站收藏
+5、还有几点程序猿要培养的地方：
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2017/12/30/2017%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2017年下半年拙作">     <img class="post_bg" src="/img/nature8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2017年下半年拙作"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/12/30/2017%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2017年下半年拙作">2017年下半年拙作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-12-29T16:00:00.000Z" title="发表于 2017-12-30 00:00:00">2017-12-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%97/">诗</a></span></div><div class="content">
 以下这些都是2017年以忆璀萧为名写的拙作，今做整理，仅作纪念！
 
-        </a>
-      </p>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2017-12-30 00:00" pubdate>
-              2017-12-30
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AF%97/">诗</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>
-            
-              <a href="/tags/%E8%AF%97/">诗</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2017/11/18/2016%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" target="_self">
-          <img src="/img/nature5.jpeg" srcset="/img/loading.gif" alt="2016年上半年拙作">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2017/11/18/2016%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/">2016年上半年拙作</a>
-      </h1>
 
-      <p class="index-excerpt">
-        <a href="/2017/11/18/2016%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/">
-          
-          
-            
-          
-          
+(四十九)仙溪随记（一）寒风拂柳，惊走一行又一行白鹭。仙溪静栖，却起一层连一层涟漪。
+(五十)仙溪随记(二)北区，橙黄的街灯陪我跑了一圈又一圈，晚风也安静了不少，不再像之前那番大闹，仅仅只是吹在脸上觉得凉快，舒畅。
+(五十一)仙溪随记(三)多年以来，有着这样一座孤岛，山上开满了鲜花，种满了青草，散发着沁人的气味，也有着小桥，有着流水，里面的人却出不来，外面的人进不去。
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2017/11/18/2016%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2016年上半年拙作">     <img class="post_bg" src="/img/nature5.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2016年上半年拙作"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/11/18/2016%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2016年上半年拙作">2016年上半年拙作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-11-17T16:00:00.000Z" title="发表于 2017-11-18 00:00:00">2017-11-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%97/">诗</a></span></div><div class="content">
 以下这些都是2016年以忆璀萧为名写的拙作，今做整理，仅作纪念！
 
-        </a>
-      </p>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2017-11-18 00:00" pubdate>
-              2017-11-18
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AF%97/">诗</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>
-            
-              <a href="/tags/%E8%AF%97/">诗</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2017/10/28/2015%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" target="_self">
-          <img src="/img/nature4.jpeg" srcset="/img/loading.gif" alt="2015下半年拙作">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2017/10/28/2015%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/">2015下半年拙作</a>
-      </h1>
 
-      <p class="index-excerpt">
-        <a href="/2017/10/28/2015%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/">
-          
-          
-            
-          
-          
+(四十七)无题——STC 2016.01.12 22:13郊外遍地高树，紫荆缤纷卧路。朦胧不见远处，岂知伊人何宿。
+(四十八)无题·雾——2016.03.20 忆璀萧冷风残月朦胧雾，烟里旧时花落处。晚风喃言话温柔，不解凤岗小巷愁。
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2017/10/28/2015%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2015下半年拙作">     <img class="post_bg" src="/img/nature4.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2015下半年拙作"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/10/28/2015%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2015下半年拙作">2015下半年拙作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-10-27T16:00:00.000Z" title="发表于 2017-10-28 00:00:00">2017-10-28</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%97/">诗</a></span></div><div class="content">
 以下这些都是2015年以STC为名写的拙作，今做整理，仅作纪念！
 
-        </a>
-      </p>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2017-10-28 00:00" pubdate>
-              2017-10-28
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AF%97/">诗</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>
-            
-              <a href="/tags/%E8%AF%97/">诗</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2017/09/28/2015%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" target="_self">
-          <img src="/img/nature3.jpg" srcset="/img/loading.gif" alt="2015上半年拙作">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2017/09/28/2015%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/">2015上半年拙作</a>
-      </h1>
 
-      <p class="index-excerpt">
-        <a href="/2017/09/28/2015%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/">
-          
-          
-            
-          
-          
+（三十四）窗与海湾——STC 2015.09.02 21:35雨轻轻敲扣着窗，月黯黯孤寂着湾。窗是眺望你的窗，湾是等待你的湾。海湾边上楼的窗，窗外不远的海湾。年轻的你在何方？如今的我在他乡。
+（三十五）——STC 2015.09.03 19:14月下独斟三两杯,人生悲喜又几回.（三十六）岁月的轨迹——STC 2015.09.04 19:00书桌上那一页已泛黄的日历，静静地栖息。院子里那一片再染绿的痕迹，慢慢地沉淀。岁月悄无声息地走过，留下行行有深有浅的轨迹。而你我已经越走越远了，唯独留下苍白的记忆。在那里，搁浅。
+(三十七)——2015.09.17书写文两篇，感慨情万千。
+（三十八）——2015.09.18  12:50拖着疲乏的身躯，脑袋迷迷糊糊地催促着它，休息休息……迷迷糊糊地来到了这里
+（三十九）月下独酌——STC 2015.09.27月下独酌三两杯，人生悲喜又几回。今夜中秋月圆时，寄去远方情相思。
+（四十）赏月有感——STC 2015.09.29夜风起兮云消散，圆月亮兮照前窗。昔时云还淡掩月，此刻月已照 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2017/09/28/2015%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2015上半年拙作">     <img class="post_bg" src="/img/nature3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2015上半年拙作"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/09/28/2015%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2015上半年拙作">2015上半年拙作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-09-27T16:00:00.000Z" title="发表于 2017-09-28 00:00:00">2017-09-28</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%97/">诗</a></span></div><div class="content">
 以下这些都是2015年以STC为名写的拙作，今做整理，仅作纪念！
 
-        </a>
-      </p>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2017-09-28 00:00" pubdate>
-              2017-09-28
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AF%97/">诗</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>
-            
-              <a href="/tags/%E8%AF%97/">诗</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2017/09/25/%E9%87%8D%E6%B8%A9%E3%80%8A%E7%BA%A6%E5%AE%9A%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%E3%80%8B/" target="_self">
-          <img src="/img/gufeng2.jpg" srcset="/img/loading.gif" alt="重温《约定的那些事儿》">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2017/09/25/%E9%87%8D%E6%B8%A9%E3%80%8A%E7%BA%A6%E5%AE%9A%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%E3%80%8B/">重温《约定的那些事儿》</a>
-      </h1>
 
-      <p class="index-excerpt">
-        <a href="/2017/09/25/%E9%87%8D%E6%B8%A9%E3%80%8A%E7%BA%A6%E5%AE%9A%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%E3%80%8B/">
-          
-          
-            
-          
-          本文写于2015‎年‎1‎月31日 ‎星期六，‏‎21:53:44当时自己非常痴迷于《明朝》，每天都往图书馆跑，就是为了看它，貌似它代替了到图书馆吹空调的原动力[笑]，也因此有一天突然有了个写下面这篇的想法。加之本来想把这篇写在《手写的从前》中的，自己想把一些少年时候的经历写下来，而梦中这个构思这是为了突出时间过得飞快，也对以前在一起的玩伴的思念。[这都行！笑]
-        </a>
-      </p>
+(十六)致青春不见与再见那年好似梦里微笑说过回头再见，然而你我离别各走东西相距甚远。那年匆忙未来得及完整记住你的脸，于是我只能在纸上模糊素描你笑颜。你我或许不再相见，我还是留恋你的脸，若是再见还以笑颜。
+(十七)致STC随兴赋辞重游旧地却车绕，忽觉曾经少年老。过客望断寂天涯，独倚一隅忆璀萧。少年曾醉梦黄梁，确信酬勤自天道。伊人酌酒敬明月，已是诗雨濯竹筱。
+(十八)江城子·甲午腊月廿七午记梦几年前程路朦朦，眼难澄，自思懵。独吹笙箫，何处共难承。即便旧地来相见，旧铁凳，新蔓藤。午间迷与周公梦，骏马骋，故友盟。都将酒饮，此地望前程。料想年年聚此处，菊花酒，弯瓦甍。
+(十九)再见，不见六月的雨该是多么认真才下得如此，那年的秋如此孤寂只是因为缺了你。梧桐树下的落叶被细雨拍打叶缝里，我的那句淡淡的问候显得苍白无力。渐渐地，我将被遗忘在你青春花季，慢慢地，你的笑颜淡出我年少记忆。再见了，可爱的你，可爱的嬉笑语，不见了，你的背影，依旧留在空气。
+(二十)致南唐后主诀别诗词一行行，写不完别恋秋殇。小楼东风一阵阵，吹不了笙箫凄响。 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2017/09/25/%E9%87%8D%E6%B8%A9%E3%80%8A%E7%BA%A6%E5%AE%9A%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%E3%80%8B/" title="重温《约定的那些事儿》">     <img class="post_bg" src="/img/gufeng2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="重温《约定的那些事儿》"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/09/25/%E9%87%8D%E6%B8%A9%E3%80%8A%E7%BA%A6%E5%AE%9A%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%E3%80%8B/" title="重温《约定的那些事儿》">重温《约定的那些事儿》</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-09-24T16:00:00.000Z" title="发表于 2017-09-25 00:00:00">2017-09-25</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%96%87%E7%AB%A0/">文章</a></span></div><div class="content">本文写于2015‎年‎1‎月31日 ‎星期六，‏‎21:53:44当时自己非常痴迷于《明朝》，每天都往图书馆跑，就是为了看它，貌似它代替了到图书馆吹空调的原动力[笑]，也因此有一天突然有了个写下面这篇的想法。加之本来想把这篇写在《手写的从前》中的，自己想把一些少年时候的经历写下来，而梦中这个构思这是为了突出时间过得飞快，也对以前在一起的玩伴的思念。[这都行！笑]
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2017-09-25 00:00" pubdate>
-              2017-09-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E6%96%87%E7%AB%A0/">文章</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2017/09/21/%E9%87%8D%E6%9E%84%E8%87%AA%E6%88%91%EF%BC%8C%E7%94%A8%E5%BF%83%E7%BB%8F%E8%90%A5/" target="_self">
-          <img src="/img/wallhaven.png" srcset="/img/loading.gif" alt="重构自我，用心经营">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2017/09/21/%E9%87%8D%E6%9E%84%E8%87%AA%E6%88%91%EF%BC%8C%E7%94%A8%E5%BF%83%E7%BB%8F%E8%90%A5/">重构自我，用心经营</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2017/09/21/%E9%87%8D%E6%9E%84%E8%87%AA%E6%88%91%EF%BC%8C%E7%94%A8%E5%BF%83%E7%BB%8F%E8%90%A5/">
-          
-          
-            
-          
-          
+约定的那些事儿&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“我们以后长大了也一定要玩喔！谁也 不准忘记谁！” “一言为定！拉钩，拉钩， 一百年不许变！”几个正玩着“跳格子”的孩 子天真地大声说道。接着，他们又开心地玩 起。不一会儿，还玩起“金鸡独立”（一个人 单脚跳着抓人），“后背捉迷藏”。这一切， 诗雨筱偶然经过一处空地，都看在眼里，他 似乎在想些什么。“，快走啦，还要坐车 回去呢？”舍友轻推了他一下，“哦，嗯 嗯！”他总算回过神了，想看下手机的时间，却发现了眼角几道泪痕。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2017/09/21/%E9%87%8D%E6%9E%84%E8%87%AA%E6%88%91%EF%BC%8C%E7%94%A8%E5%BF%83%E7%BB%8F%E8%90%A5/" title="重构自我，用心经营">     <img class="post_bg" src="/img/wallhaven.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="重构自我，用心经营"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/09/21/%E9%87%8D%E6%9E%84%E8%87%AA%E6%88%91%EF%BC%8C%E7%94%A8%E5%BF%83%E7%BB%8F%E8%90%A5/" title="重构自我，用心经营">重构自我，用心经营</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-09-20T16:00:00.000Z" title="发表于 2017-09-21 00:00:00">2017-09-21</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%96%87%E7%AB%A0/">文章</a></span></div><div class="content">
 秋风起兮，枯叶缓缓落，咯吱一声又一声，静静地躺在树根处。等到快春天的时候，树就会长出新的枝叶。而这引起了我的思考，难道这不是在重构吗？是的，在我的眼里，万物都要依据一定的条件，进行重构。而我需要的是重构自我，用心经营。
 
 重构
 前面已提为什么要重构自我，不想赘述，下面是重构前后的对比。
 
-        </a>
-      </p>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2017-09-21 00:00" pubdate>
-              2017-09-21
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E6%96%87%E7%AB%A0/">文章</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
+Before
+New
+前端技术栈构建
+经营
+很多道理大家都懂，真正做起来就并不是容易的事，真正坚持做下去的又有多少？所以一切都需要时间去慢慢经营，欲速则不达。
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2017/08/18/2014%E5%B9%B4%E5%85%A8%E5%B9%B4%E6%8B%99%E4%BD%9C/" target="_self">
-          <img src="/img/nature7.png" srcset="/img/loading.gif" alt="2014年全年拙作">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2017/08/18/2014%E5%B9%B4%E5%85%A8%E5%B9%B4%E6%8B%99%E4%BD%9C/">2014年全年拙作</a>
-      </h1>
+课程学习
+计算机基础
 
-      <p class="index-excerpt">
-        <a href="/2017/08/18/2014%E5%B9%B4%E5%85%A8%E5%B9%B4%E6%8B%99%E4%BD%9C/">
-          
-          
-            
-          
-          
+大学计算机
+
+大学计算机–计算思维的视角
+
+微机原理与接口技术
+
+计算机硬件技术基础
+
+编译原理
+
+算法导论
+
+郝斌数据结构教程
+
+鸟哥Linux私房菜
+
+计算机图形学
+
+
+
+网络基础
+
+计算机网络基础
+
+计算机网络技术
+
+网络技术与应用
+
+
+
+编程语言
+
+郝斌C程序设计
+
+郝斌Java程序设计
+
+C++语言程序设计（上）
+
+C++语言程序设计（下）——从C到C++
+
+VisualBasic6.0程序设计
+
+VisualBasic.NET程序设计入门
+
+
+
+
+
+前端
+
+Web前端工程师
+
+奇舞学院
+
+freecod ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2017/08/18/2014%E5%B9%B4%E5%85%A8%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2014年全年拙作">     <img class="post_bg" src="/img/nature7.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2014年全年拙作"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/08/18/2014%E5%B9%B4%E5%85%A8%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2014年全年拙作">2014年全年拙作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-08-17T16:00:00.000Z" title="发表于 2017-08-18 00:00:00">2017-08-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%97/">诗</a></span></div><div class="content">
 以下这些都是2014年以忆璀萧为名写的拙作，今做整理，仅作纪念！
 
-        </a>
-      </p>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2017-08-18 00:00" pubdate>
-              2017-08-18
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AF%97/">诗</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>
-            
-              <a href="/tags/%E8%AF%97/">诗</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2017/07/20/%E3%80%8A%E6%98%8E%E6%9C%9D%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%E3%80%8B%E9%82%A3%E4%BA%9B%E6%84%9F%E5%8F%97/" target="_self">
-          <img src="/img/gufeng1.png" srcset="/img/loading.gif" alt="《明朝那些事儿》那些感受">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2017/07/20/%E3%80%8A%E6%98%8E%E6%9C%9D%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%E3%80%8B%E9%82%A3%E4%BA%9B%E6%84%9F%E5%8F%97/">《明朝那些事儿》那些感受</a>
-      </h1>
 
-      <p class="index-excerpt">
-        <a href="/2017/07/20/%E3%80%8A%E6%98%8E%E6%9C%9D%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%E3%80%8B%E9%82%A3%E4%BA%9B%E6%84%9F%E5%8F%97/">
-          
-          
-            
-          
-          
+（一）
+饮尽《醉红颜》一壶，还记《新水浒》插曲。
+知得《茉莉雨》可比，耳闻方文山亲笔。
+前者只哼扣心弦，后者词美雨似泉。
+（二）
+伊人庭院悟道过暮夕，最是入醉忘却己。
+此刻境界得来皆不易，待以笑靥回敬兮。
+（三）
+虞美人
+人来年往几时休，知己度几秋。长亭柳边道别去，故友各走东西难同趣。
+离别诗句应犹在，只是态度易。问君此刻笑几许，恰似急雨满沟渠。
+“趣”:通“趋”
+（四）
+致青春
+你在我的生活留下浅浅脚印，
+我在你的记忆不留淡淡痕迹。
+你带着笑靥渐渐远走去，
+我惟有微笑默默致离意。
+手中的铅笔素描着你，
+天空纸飞机写满回忆。
+你在或是不在，
+距离就在那里，
+不增不减。
+你记或是不记，
+记忆就在那里，
+不开不关。
+我静思着，
+微笑着，
+离去，
+你的，
+记。
+(五)
+思者写也
+解放思绪出牢笼，千丝万缕漫苍穹。
+每日思考写作中，莫等青春回头空。
+（六）
+观雨触风随笔作
+（一） 雨细似丝如思绪，风冷刺骨犹穿心。骚人墨迹多诗雨，侠客御风凭豪情。
+（二） 骚人墨客走遍华夏，杰伦过客无视天涯。
+（七）
+此刻思考者的姿态
+人生 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2017/07/20/%E3%80%8A%E6%98%8E%E6%9C%9D%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%E3%80%8B%E9%82%A3%E4%BA%9B%E6%84%9F%E5%8F%97/" title="《明朝那些事儿》那些感受">     <img class="post_bg" src="/img/gufeng1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《明朝那些事儿》那些感受"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/07/20/%E3%80%8A%E6%98%8E%E6%9C%9D%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%E3%80%8B%E9%82%A3%E4%BA%9B%E6%84%9F%E5%8F%97/" title="《明朝那些事儿》那些感受">《明朝那些事儿》那些感受</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-07-19T16:00:00.000Z" title="发表于 2017-07-20 00:00:00">2017-07-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%96%87%E7%AB%A0/">文章</a></span></div><div class="content">
 本文分别写于 2014-12-12 22:49（首）与 2014-12-15 22:26（续），在QQ空间里，今做整理，虽很粗糙，却记录年华，仅作怀念！
 
-        </a>
-      </p>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2017-07-20 00:00" pubdate>
-              2017-07-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
+
+
+首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说实在，我写这篇随笔的目的不是为了说明我的文笔有多好，只是看了《明朝》二的前五节有点小激动罢，也是为自己的读书笔记正式开个好头罢。说起《明朝》，其实自己在高中就知道了，那时是在一家小书店里接触的，但是也算是被它不同于其他的历史著作的题目还有就是作者笔名当年明月。本身自己也较喜欢历史著作，《明朝》是不是完全符合历史便没去深究了。不过后来，我学会怎么在网上下载电子书，便下载了《明朝》，可惜只看了一点，便因为课内学习没空去看，怎么说呢？过去看这样的书都会被老师看做是不好的。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;直到今天在图书馆碰到，终于真正拜读了几节。本书开头毛佩琦就以不同寻常的方式作序——作者当年明月在朦胧中又是遇到朱重八，又是朱棣……颇有穿越的意味 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/头像.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Zenquan</div><div class="author-info__description">用心写好代码，用心阅读生活。</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2018/08/18/2018%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2018上半年拙作"><img src="/img/bear.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2018上半年拙作"/></a><div class="content"><a class="title" href="/2018/08/18/2018%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2018上半年拙作">2018上半年拙作</a><time datetime="2018-08-17T16:00:00.000Z" title="发表于 2018-08-18 00:00:00">2018-08-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2018/04/05/%E5%9C%A8%E6%88%91%E7%9C%8B%E6%9D%A5%E5%A6%82%E4%BD%95%E5%AD%A6%E5%A5%BD%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A8%8B/" title="在我看来如何学好前端编程"><img src="/img/learn.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在我看来如何学好前端编程"/></a><div class="content"><a class="title" href="/2018/04/05/%E5%9C%A8%E6%88%91%E7%9C%8B%E6%9D%A5%E5%A6%82%E4%BD%95%E5%AD%A6%E5%A5%BD%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A8%8B/" title="在我看来如何学好前端编程">在我看来如何学好前端编程</a><time datetime="2018-04-04T16:00:00.000Z" title="发表于 2018-04-05 00:00:00">2018-04-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/12/30/2017%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2017年下半年拙作"><img src="/img/nature8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2017年下半年拙作"/></a><div class="content"><a class="title" href="/2017/12/30/2017%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2017年下半年拙作">2017年下半年拙作</a><time datetime="2017-12-29T16:00:00.000Z" title="发表于 2017-12-30 00:00:00">2017-12-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/11/18/2016%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2016年上半年拙作"><img src="/img/nature5.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2016年上半年拙作"/></a><div class="content"><a class="title" href="/2017/11/18/2016%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2016年上半年拙作">2016年上半年拙作</a><time datetime="2017-11-17T16:00:00.000Z" title="发表于 2017-11-18 00:00:00">2017-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/10/28/2015%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2015下半年拙作"><img src="/img/nature4.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2015下半年拙作"/></a><div class="content"><a class="title" href="/2017/10/28/2015%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E6%8B%99%E4%BD%9C/" title="2015下半年拙作">2015下半年拙作</a><time datetime="2017-10-27T16:00:00.000Z" title="发表于 2017-10-28 00:00:00">2017-10-28</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
             
-              <a href="/categories/%E6%96%87%E7%AB%A0/">文章</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-
-
-
-
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    
-  </main>
-
-  
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
-  
-
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
-
-  
-
-  
-
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-      <i class="iconfont icon-love"></i>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid</span></a>
-    </div>
-    
-  <div class="statistics">
-    
-    
-
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            总访客数 
-            <span id="busuanzi_value_site_uv"></span>
-             人
-          </span>
-      
-    
-  </div>
-
-
-    
-  <!-- 备案信息 -->
-  <div class="beian">
-    <a href="http://beian.miit.gov.cn/" target="_blank"
-       rel="nofollow noopener">粤ICP备20066974号</a>
-    
-      <a
-        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=http://www.miit.gov.cn"
-        rel="nofollow noopener"
-        class="beian-police"
-        target="_blank"
-      >
-        <span class="beian-police-sep">&nbsp;|&nbsp;</span>
-        
-          <img src="/img/police_beian.png" srcset="/img/loading.gif" alt="police-icon" />
-        
-        <span>粤ICP备20066974号</span>
-      </a>
-     
-  </div>
-
-
-    
-  </div>
-</footer>
-
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
-
-<!-- Plugins -->
-
-
-  
-    <script  src="/js/lazyload.js" ></script>
-  
-
-
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
-
-
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "用心写好代码，用心阅读生活！&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 70,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    <!-- Baidu Analytics -->
-    <script defer>
-      var _hmt = _hmt || [];
-      (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?15729461";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-      })();
-    </script>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-
-
-
-</body>
-</html>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%96%87%E7%AB%A0/"><span class="card-category-list-name">文章</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AF%97/"><span class="card-category-list-name">诗</span><span class="card-category-list-count">6</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.1em; color: #999">前端</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.1em; color: #999">技术</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.1em; color: #999">编程</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" style="font-size: 1.1em; color: #999">计算机</a> <a href="/tags/%E8%AF%97/" style="font-size: 1.3em; color: #99a1ac">诗</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 1.5em; color: #99a9bf">随笔</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/08/"><span class="card-archive-list-date">八月 2018</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/04/"><span class="card-archive-list-date">四月 2018</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2017/12/"><span class="card-archive-list-date">十二月 2017</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2017/11/"><span class="card-archive-list-date">十一月 2017</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2017/10/"><span class="card-archive-list-date">十月 2017</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2017/09/"><span class="card-archive-list-date">九月 2017</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2017/08/"><span class="card-archive-list-date">八月 2017</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2017/07/"><span class="card-archive-list-date">七月 2017</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">10</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-06-19T09:35:16.905Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Zenquan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

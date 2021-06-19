@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Zenquan码字地方
-subtitle: 'Zenquan码字地方'
-description: 'Zenquan码字地方'
-keywords: Zenquan码字地方, Zenquan
+title: Zenquan的博客
+subtitle: '用心写好代码，用心阅读生活。'
+description: '用心写好代码，用心阅读生活。'
+keywords: Zenquan的博客, Zenquan
 author: Zenquan
 language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: article.joyenjoy.tech
+url: blog.joyenjoy.tech
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -41,7 +41,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -99,7 +99,8 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: landscape
-theme: fluid
+# theme: fluid
+theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
