@@ -7,7 +7,7 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "server:prod": "npm run build && npm run server",
+    "dev": "npm run build && npm run server",
     "run": "pm2 start ./script/run.js",
     "update": "node ./update/index.js"
   },
