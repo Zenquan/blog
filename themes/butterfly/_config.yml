@@ -44,8 +44,8 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  # fab fa-github: https://github.com/xxxxx || Github
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
+  # fab fa-github: https://github.com/Zenquan || Github
+  # fas fa-envelope: mailto:Jomsou@qq.com || Email
 
 # search (搜索)
 # --------------------------------------
@@ -107,7 +107,7 @@ tag_img:
 
 # The banner image of tag page
 # format:
-#  - tag name: xxxxx
+#  - tag name: Zenquan
 tag_per_img:
 
 # If the banner of category page not setting, it will show the top_img
@@ -116,7 +116,7 @@ category_img:
 
 # The banner image of category page
 # format:
-#  - category name: xxxxx
+#  - category name: Zenquan
 category_per_img:
 
 cover:
@@ -464,9 +464,9 @@ google_adsense:
 
 site_verification:
   # - name: google_site_verification
-  #   content: xxxxxx
+  #   content: Zenquanx
   # - name: baidu_site_verification
-  #   content: xxxxxxx
+  #   content: Zenquanxx
 
 # Beautify/Effect (美化/效果)
 # --------------------------------------
@@ -504,7 +504,7 @@ tag_ui: # 留空或 index
 
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
-# The formal of image: url(http://xxxxxx.com/xxx.jpg)
+# The formal of image: url(http://Zenquanx.com/xxx.jpg)
 background:
 
 # Footer Background
@@ -645,7 +645,7 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/xxxxxx
+      link: https://github.com/Zenquanx
   card_announcement:
     enable: true
     content: 我的博客上线啦~~
